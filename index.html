@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gumiberchenbande - TikTok Verlosung 🎁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🎁 GUMIBERCHENBANDE VERLOSUNG</h1>
+                <p class="subtitle">Folge uns auf TikTok und gewinne!</p>
+            </div>
+        </header>
+
+        <!-- Follower Counter -->
+        <section class="follower-section">
+            <div class="follower-card">
+                <h2>Aktuelle Follower</h2>
+                <div class="follower-count" id="followerCount">
+                    <span class="count">--</span>
+                    <span class="label">Follower auf @gumiberchenbande</span>
+                </div>
+                <p class="update-time" id="updateTime">Wird geladen...</p>
+            </div>
+        </section>
+
+        <!-- Prize Info -->
+        <section class="prizes-section">
+            <div class="prizes-grid">
+                <div class="prize-card">
+                    <h3>🎟️ 10x €10 Gutschein</h3>
+                    <p>Einlösbar bei Shops deiner Wahl</p>
+                </div>
+                <div class="prize-card">
+                    <h3>🌟 5x Tag mit uns</h3>
+                    <p>Exklusiver Tag mit der Gumiberchenbande</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section class="form-section">
+            <form id="giveawayForm" class="giveaway-form">
+                <div class="form-group">
+                    <label for="tikTokName">TikTok Benutzername *</label>
+                    <input type="text" id="tikTokName" name="tikTokName" placeholder="@deinusername" required>
+                    <small>Bitte gib deinen TikTok Benutzernamen ein (mit oder ohne @)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail Adresse *</label>
+                    <input type="email" id="email" name="email" placeholder="deine@email.com" required>
+                    <small>Für die Benachrichtigung des Gewinns</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Warum verdienst du es zu gewinnen? *</label>
+                    <textarea id="reason" name="reason" placeholder="Erzähl uns, warum du es verdient hast zu gewinnen..." rows="4" required></textarea>
+                    <small>Maximal 500 Zeichen</small>
+                    <div class="char-count">
+                        <span id="charCount">0</span>/500
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Was möchtest du gewinnen? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="prizeType" value="gutschein" checked>
+                            <span>€10 Gutschein (10 Plätze verfügbar)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="prizeType" value="dayWithUs">
+                            <span>Tag mit der Gumiberchenbande (5 Plätze verfügbar)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Welcher Gutschein interessiert dich? *</label>
+                    <select id="gutscheinType" name="gutscheinType" required>
+                        <option value="">-- Wähle einen Gutschein --</option>
+                        <option value="amazon">Amazon €10</option>
+                        <option value="spotify">Spotify €10</option>
+                        <option value="netflix">Netflix €10</option>
+                        <option value="playstation">PlayStation Store €10</option>
+                        <option value="steam">Steam €10</option>
+                        <option value="zalando">Zalando €10</option>
+                        <option value="redbull">Red Bull €10</option>
+                        <option value="other">Sonstiges</option>
+                    </select>
+                    <small id="gutscheinHint">Wähle deinen bevorzugten Gutschein aus</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="followConfirm" required>
+                        <span>Ich bestätige, dass ich @gumiberchenbande auf TikTok folge *</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="termsAccept" required>
+                        <span>Ich akzeptiere die Teilnahmebedingungen *</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">🎉 Jetzt teilnehmen</button>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <h2>✅ Anmeldung erfolgreich!</h2>
+                <p>Danke für deine Teilnahme! Drücken wir dir die Daumen! 🍀</p>
+                <button onclick="location.reload()" class="reset-btn">Weitere Person hinzufügen</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Folge uns auf TikTok: <a href="https://www.tiktok.com/@gumiberchenbande" target="_blank">@gumiberchenbande</a></p>
+            <p>Viel Glück! 🍀</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
